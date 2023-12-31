@@ -52,3 +52,37 @@ buttonSong.onclick= function(){
         mySong.play()
     }
 }
+
+
+// intro.js
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Get the slider container
+    var sliderContainer = document.querySelector(".box-slider");
+
+    // Get the mail button
+    var mailButton = document.querySelector(".mail");
+
+    // Get the rhombus image container
+    var rhombusImageContainer = document.querySelector(".rhombus-img");
+
+    // Add an event listener to the slider container
+    sliderContainer.addEventListener("scroll", function () {
+        // Check if the rhombus image is in view
+        var isRhombusInView = isElementInViewport(rhombusImageContainer);
+
+        // Toggle the visibility of the mail button based on the image visibility
+        mailButton.style.display = isRhombusInView ? "block" : "none";
+    });
+
+    // Function to check if an element is in the viewport
+    function isElementInViewport(element) {
+        var rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+});

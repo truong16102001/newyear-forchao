@@ -1403,8 +1403,8 @@ body{
 }
 .mail{
     position: absolute;
-    z-index: 100000;
-    margin-top: -300px;
+    z-index: 10;
+    margin-top: -500px;
     width: 100px;
     height: 40px;
     display: flex;
@@ -2028,8 +2028,8 @@ body{
         height: 170px;
     }
     .mail{
-        margin-top:-300px;
-        z-index: 1000000000000000;
+        margin-top:-500px;
+        z-index: 10;
     }
     .slider3 .box-content{
         width: 100%;
